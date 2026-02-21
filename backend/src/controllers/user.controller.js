@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+const User = require('../model/user');
+const bcrypt = require('bcrypt');
 
 async function signup(req, res) {
     try {
