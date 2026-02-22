@@ -9,6 +9,7 @@ const routes = new Router();
 
 routes.post('/register', authController.signup);
 routes.post('/login', authController.login);
+routes.post('/logout', authController.logout);
 
 
 module.exports = routes;

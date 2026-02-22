@@ -67,8 +67,18 @@ async function login(req, res) {
         res.status(500).json({ message: 'Error logging in', error });
     }
 }
+
+async function logout(req, res) {
+    res.clearCookie("token", {
+        httpOnly: true,
+        sameSite: "none",
+        secure: true
+    });
+    res.status(200).json({ message: "Logged out successfully" });
+}
 module.exports = {
     signup,
     login,
+    logout
 }
 
