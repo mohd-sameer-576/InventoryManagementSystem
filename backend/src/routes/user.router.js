@@ -6,9 +6,9 @@ const authController = require('../controllers/user.controller');
 const routes = new Router();
 
 // Add routes
-// routes.get('/', SessionController.store);
+
 routes.post('/register', authController.signup);
-// routes.put('/', SessionController.store);
-// routes.delete('/', SessionController.store);
+routes.post('/login', authController.login);
+
 
 module.exports = routes;
